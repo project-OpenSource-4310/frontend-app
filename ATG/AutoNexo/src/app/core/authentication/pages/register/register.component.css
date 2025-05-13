@@ -220,25 +220,3 @@ body,main,button,div,span,img,label,p,a,input{
     transform: scale(1);
   }
 }
-
-/*Boton de enviar*/
-
-.submit {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  font-size: 18px;
-  color: #fff;
-  border-radius: 30px;
-  padding: 10px;
-  outline-offset: -3px;
-  border: none;
-  transition: 400ms;
-  background-color: #DD22EB;
-  outline: 3px #DD22EB solid;
-  cursor:pointer;
-}
-
-.submit:hover {
-  background-color: transparent;
-  color: #DD22EB;
-}

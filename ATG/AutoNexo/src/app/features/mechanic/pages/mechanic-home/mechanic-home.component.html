@@ -4,7 +4,17 @@
   <!-- En esta parte iria un servicio para que muestre
   los vehiculos de acuerdo a la cantidad que tenga asignada el mecanico -->
   <div class="vehicule-list">
-    <div class="vehicule-item">
-    </div>
+    <mat-card class="vehicule-card" appearance="outlined">
+      <mat-card-header>
+        <mat-card-title>Marca + modelo de Vehiculo</mat-card-title>
+        <mat-card-title>Nombre del cliente</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <img class="vehicule-photo" src="default_vehicule.png" alt="vehicule-photo">
+      </mat-card-content>
+      <mat-card-actions>
+        <app-classic-button>Ver Vehiculo</app-classic-button>
+      </mat-card-actions>
+    </mat-card>
   </div>
 </main>

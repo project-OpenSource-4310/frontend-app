@@ -3,7 +3,7 @@ import {EntryPointComponent} from './core/authentication/pages/entry-point/entry
 const LoginComponent =() => import('./core/authentication/pages/login/login.component').then(m => m.LoginComponent);
 const RegisterComponent =() => import('./core/authentication/pages/register/register.component').then(m => m.RegisterComponent);
 const ForgotPasswordComponent = () => import('./core/authentication/pages/forgot-password/forgot-password.component').then(m => m.ForgotPasswordComponent);
-const RolesComponent = () => import('./core/role-selection/role-selection.component').then(m => m.RoleSelectionComponent);
+const RoleSelectionComponent = () => import('./core/role-selection/role-selection.component').then(m => m.RoleSelectionComponent);
 const TermsConditionsComponent = () => import('./core/authentication/pages/terms-conditions/terms-conditions.component').then(m => m.TermsConditionsComponent);
 const PageNotFoundComponent = () => import('./core/page-not-found/page-not-found.component').then(m => m.PageNotFoundComponent);
 const MechanicHomeComponent=()=>import('./features/mechanic/pages/mechanic-home/mechanic-home.component').then(m => m.MechanicHomeComponent);
@@ -18,7 +18,7 @@ export const routes: Routes = [
   {path:'register',loadComponent:RegisterComponent},
   {path:'login',loadComponent:LoginComponent},
   {path:'forgot-password',loadComponent:ForgotPasswordComponent},
-  {path:'roles',loadComponent:RolesComponent},
+  {path:'role-selection',loadComponent:RoleSelectionComponent},
   {path:'terms-conditions',loadComponent:TermsConditionsComponent},
   {path:'mechanic-home',loadComponent:MechanicHomeComponent},
   {path:'mechanic-inventory',loadComponent:MechanicInventoryComponent},
