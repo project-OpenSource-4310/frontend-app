@@ -1,0 +1,69 @@
+.decisions-buttons{
+  display: flex;
+  gap: 15px;
+}
+
+.decision-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #080210;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: .3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.decision-icon {
+  width: 25px;
+  transition-duration: .3s;
+}
+
+
+.decision-button:hover{
+  width: 140px;
+  border-radius: 50px;
+  transition-duration: .3s;
+  align-items: center;
+}
+.deny:hover {
+  background-color: #e93b3b;
+}
+
+.accept:hover {
+  background-color: #27AE60;
+}
+
+.decision-button:hover .decision-icon {
+  width: 50px;
+  transition-duration: .3s;
+  transform: translateY(100%);
+}
+
+.decision-button::before{
+  position: absolute;
+  top: -20px;
+  color: #fff;
+  transition-duration: .3s;
+  font-size: 2px;
+}
+.deny::before {
+  content: "Denegar";
+}
+
+.accept::before {
+  content: "Aceptar";
+}
+
+.decision-button:hover::before {
+  font-size: 18px;
+  opacity: 1;
+  transform: translateY(33px);
+  transition-duration: .3s;
+}

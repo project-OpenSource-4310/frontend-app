@@ -1,0 +1,197 @@
+/* Ajustes globales */
+body {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #080210;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+body,main,h1, h2, p {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* Contenedor general */
+.pagenotfound-main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* ¡centra verticalmente! */
+  overflow: hidden;
+  position: relative;
+}
+
+/* Contenedor del camión */
+.truck-container {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* Texto del error */
+.error-container {
+  font-family: "Montserrat", sans-serif;
+  color: #DD22EB;
+  position: absolute;
+  top: 55%;
+  left: 36%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  pointer-events: none; /* por si no quieres que interfiera con clics */
+  width: 50%;
+}
+
+.error-number {
+  font-size: clamp(4rem, 10vw, 12rem);
+  font-weight: 700;
+}
+
+.error-title {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 600;
+}
+
+.error-text {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  color: #080210;
+}
+
+/* Parte superior del camión */
+.truck-body {
+  width: 76vw;
+  margin-bottom: 4vw;
+  position: relative;
+}
+
+.signIn-button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #080210;
+  font-size: 18px;
+  width: 192px;
+  height: 55px;
+  background-color: #fff;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 5%;
+  left: 36%;
+  transform: translateX(-50%);
+}
+
+.icon-container {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 25%;
+  height: 48px;
+  background-color: #DD22EB;
+  border-radius: 22.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 0.5s ease;
+  z-index: 2;
+}
+
+.signIn-button:hover .icon-container {
+  width: 184px;
+}
+
+.button-text{
+  transform: translateX(18px);
+}
+
+.signIn_icon {
+  width: 20px;
+  height: 20px;
+}
+
+.truck_image{
+  margin-left:1.5vw ;
+  width: 100%;
+}
+/* Ruedas del camión */
+.tires-container {
+  width: 58vw;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px 0 15px;
+  position: absolute;
+  bottom: 0;
+  animation: motion 1s linear infinite;
+}
+.tire {
+  width: 10vw;
+}
+
+/* Animación de suspensión */
+@keyframes motion {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Pista */
+.road {
+  width: 100vw;
+  height: 12px;
+  background-color: #282828;
+  position: relative;
+  bottom: 0;
+  align-self: flex-end;
+  border-radius: 3px;
+}
+.road::before,
+.road::after {
+  content: "";
+  position: absolute;
+  width: 160px;
+  height: 100%;
+  background-color: #282828;
+  border-radius: 3px;
+  animation: roadAnimation 7s linear infinite;
+}
+.road::before {
+  right: -50%;
+  border-left: 10px solid #fff;
+}
+.road::after {
+  right: -65%;
+  border-left: 4px solid #fff;
+}
+
+/* Poste de luz */
+.lampost {
+  position: absolute;
+  bottom: 0;
+  right: -50vw;
+  height: 34vw;
+  animation: roadAnimation 7s linear infinite;
+}
+
+/* Animación de pista */
+@keyframes roadAnimation {
+  0% { transform: translateX(0vw); }
+  100% { transform: translateX(-180vw); }
+}
