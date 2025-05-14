@@ -48,7 +48,6 @@ body {
 
 .vehicle-container {
   width: 50%;
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,4 +1,4 @@
-import {Component, ViewEncapsulation} from '@angular/core';
+import {Component, EventEmitter, Output, ViewEncapsulation} from '@angular/core';
 
 @Component({
   selector: 'app-add-button',
@@ -8,5 +8,9 @@ import {Component, ViewEncapsulation} from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class AddButtonComponent {
+  @Output() abrirDialogo = new EventEmitter<void>();
 
+  enviarEvento() {
+    this.abrirDialogo.emit();
+  }
 }

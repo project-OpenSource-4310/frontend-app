@@ -1,5 +1,6 @@
 <app-side-bar></app-side-bar>
-<div class="modify-repair-container">
+<main class="modify-repair-container">
+  <div class="" ></div>
   <h1 class="title">Modificar reparación</h1>
   <h2 class="subtitle">
     Cliente 1 - <span class="car">Kia Picanto 2019</span>
@@ -12,10 +13,15 @@
     <div class="repair-field">El motor estuvo involucrado</div>
     <div class="repair-field">
       Inventario a emplear
-      <span class="icon">&#128295;</span> <!-- ícono mejorado -->
+      <span class="icon">&#128295;</span>
     </div>
   </div>
-
-  <button class="add-button">+</button>
+  <app-add-button (abrirDialogo)="activarDialogo()"></app-add-button>
+</main>
+<div class="dialog-overlay" *ngIf="mostrarDialogo">
+  <div class="dialog">
+    <p>Reparación modificada con éxito</p>
+    <button (click)="cerrarDialogo()">Aceptar</button>
+  </div>
 </div>
 
