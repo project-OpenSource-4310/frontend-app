@@ -11,6 +11,9 @@ const MechanicInventoryComponent=()=>import('./features/mechanic/pages/mechanic-
 const MechanicProfileComponent=()=>import('./features/mechanic/pages/mechanic-profile/mechanic-profile.component').then(m => m.MechanicProfileComponent);
 const MechanicRequestsComponent=()=>import('./features/mechanic/pages/mechanic-requests/mechanic-requests.component').then(m => m.MechanicRequestsComponent);
 const MechanicSendedComponent=()=>import('./features/mechanic/pages/mechanic-sended/mechanic-sended.component').then(m => m.MechanicSendedComponent);
+const MechanicVehicleComponent=()=>import('./features/mechanic/components/mechanic-vehicle/mechanic-vehicle.component').then(m => m.MechanicVehicleComponent);
+const AddReparationComponent=()=>import('./features/mechanic/components/add-reparation/add-reparation.component').then(m => m.AddReparationComponent);
+const ModifyRepairComponent=()=>import('./features/mechanic/components/modify-repair/modify-repair.component').then(m => m.ModifyRepairComponent);
 
 export const routes: Routes = [
   {path:'entry-point',component:EntryPointComponent},
@@ -21,9 +24,12 @@ export const routes: Routes = [
   {path:'role-selection',loadComponent:RoleSelectionComponent},
   {path:'terms-conditions',loadComponent:TermsConditionsComponent},
   {path:'mechanic-home',loadComponent:MechanicHomeComponent},
+  {path:'mechanic-vehicle',loadComponent:MechanicVehicleComponent },
   {path:'mechanic-inventory',loadComponent:MechanicInventoryComponent},
   {path:'mechanic-profile',loadComponent:MechanicProfileComponent},
   {path:'mechanic-requests',loadComponent:MechanicRequestsComponent},
   {path:'mechanic-sended',loadComponent:MechanicSendedComponent},
+  {path:'add-reparation',loadComponent:AddReparationComponent},
+  {path: 'modify-repair', loadComponent: ModifyRepairComponent},
   {path:'**',loadComponent:PageNotFoundComponent},
 ];

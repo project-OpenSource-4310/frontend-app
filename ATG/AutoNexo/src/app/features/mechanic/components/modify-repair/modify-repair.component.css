@@ -1,0 +1,99 @@
+body, nav, ul, li, button, img, main {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.modify-repair-container {
+  position: relative;
+  z-index: 1;
+  background-color: #7D0097;
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  padding: 2rem;
+  padding-left: 600px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 50px;
+  margin-bottom: 0.5rem;
+
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.car {
+  font-weight: bold;
+  color: #FFD700;
+}
+
+.cliente {
+  font-style: italic;
+  color: #e0b3f4;
+  margin-bottom: 2rem;
+}
+
+.repair-card {
+  background-color: #62007b;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  max-width: 600px;
+  transition: transform 0.3s;
+}
+
+.repair-card:hover {
+  transform: scale(1.02);
+}
+
+.repair-field {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon {
+  margin-left: 0.5rem;
+  font-size: 1.5rem;
+  color: #FFD700;
+}
+
+.add-button {
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #FF33FF;
+  color: white;
+  font-size: 2rem;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.add-button:hover {
+  background-color: #E600E6;
+  transform: scale(1.1);
+}
+
+
+
+
+

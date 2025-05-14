@@ -10,7 +10,7 @@
   border: 0;
   position: fixed;
   top: 30px;
-  left: 30px;
+  left: 80px;
 }
 .goback-button:before,.goback-button:after {
   content: "";

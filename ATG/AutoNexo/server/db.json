@@ -1,0 +1,136 @@
+{
+  "user": [
+    {
+      "IdUser": "US001",
+      "password": "password_123",
+      "firstName": "Juan",
+      "lastName": "Pérez",
+      "phoneNumber": "+1234567890",
+      "email": "juan.perez@example.com",
+      "loginStatus": "active"
+    },
+    {
+      "IdUser": "US002",
+      "password": "password_456",
+      "firstName": "Carlos",
+      "lastName": "Palacios",
+      "phoneNumber": "+4567891011",
+      "email": "carlos.palacios@example.com",
+      "loginStatus": "inactive"
+    },
+    {
+      "IdUser": "US003",
+      "password": "password_789",
+      "firstName": "María",
+      "lastName": "Gómez",
+      "phoneNumber": "+1987654321",
+      "email": "maria.gomez@example.com",
+      "loginStatus": "inactive"
+    }
+  ],
+  "mechanic": [
+    {
+      "idMechanic": "M001",
+      "idUser": "US001"
+    },
+    {
+      "idMechanic": "M002",
+      "idUser": "US002"
+    }
+  ],
+  "drivers": [
+    {
+      "idDriver": "D001",
+      "idUser": "US003"
+    }
+  ],
+  "inventory": [
+    {
+      "idInventory": "IN001",
+      "idMechanic": "M001",
+      "name": "Herramientas básicas"
+    },
+    {
+      "idInventory": "IN002",
+      "idMechanic": "M002",
+      "name": "Repuestos motor"
+    }
+  ],
+  "item": [
+    {
+      "idItem": "I001",
+      "idInventory": "IN001",
+      "name": "Destornillador",
+      "description": "Destornillador basico",
+      "quantity": 1,
+      "unitPrice": 70.50
+    },
+    {
+      "idItem": "I002",
+      "idInventory": "IN002",
+      "name": "Filtro",
+      "description": "Filtro basico",
+      "quantity": 1,
+      "unitPrice": 100.75
+    }
+  ],
+  "maintenanceRecords": [
+    {
+      "recordId": "RM001",
+      "carId": "CR001",
+      "idMechanic": "M001",
+      "idItem": "I001",
+      "maintenanceDate": "2023-05-15",
+      "description": "Cambio de aceite y filtro",
+      "totalCost": 120.50,
+      "status": "completed"
+    },
+    {
+      "recordId": "RM002",
+      "carId": "CR001",
+      "idMechanic": "M001",
+      "idItem": "I002",
+      "maintenanceDate": "2023-06-20",
+      "description": "Revisión frenos",
+      "totalCost": 85.00,
+      "status": "pending"
+    }
+  ],
+  "maintenanceRequests": [
+    {
+      "requestId": "RQ001",
+      "idMechanic": "M001",
+      "carId": "CR001",
+      "recordId": "RM002",
+      "requestDate": "2023-06-18",
+      "comment": "El conductor reporta sonido en los frenos",
+      "status": "approved"
+    }
+  ],
+  "car": [
+    {
+      "carId": "CR001",
+      "driverId": "D001",
+      "make": "Toyota",
+      "model": "Corolla",
+      "year": 2020,
+      "plate": "ABC123"
+    },
+    {
+      "carId": "CR002",
+      "driverId": "D001",
+      "make": "Honda",
+      "model": "Civic",
+      "year": 2019,
+      "plate": "XYZ789"
+    },
+    {
+      "carId": "CR003",
+      "driverId": "D001",
+      "make": "Chevrolet",
+      "model": "Onix",
+      "year": 2019,
+      "plate": "UXO512"
+    }
+  ]
+}

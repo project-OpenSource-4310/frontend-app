@@ -1,0 +1,76 @@
+
+body {
+  background-color: #f8d1ff;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+/* ver vehicule section*/
+.mechanic-vehicle {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 80px;
+  padding-top: 50px;
+}
+
+.titles-container{
+  text-align: center;
+  margin-bottom: 20px;
+}
+.title{
+  font-family: "Montserrat", sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 50px;
+  color: #080210;
+}
+
+.subtitle{
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 36px;
+  color: #080210;
+}
+
+.options-container{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 60%;
+}
+
+.vehicle-container {
+  width: 50%;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
+  position: relative;
+}
+
+.vehicle-image {
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  top: -60px;
+  z-index: 10;
+}
+
+.platform {
+  width: 100%;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #080210;
+  box-shadow: 0 20px 8px rgba(0, 0, 0, 0.6);
+  position: relative;
+  top: -220px;
+  z-index: 5;
+}

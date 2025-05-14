@@ -18,7 +18,7 @@ body, nav, ul, li, button, img, main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-left: 80px;
+  padding-left: 75px;
 }
 
 .title{
@@ -31,27 +31,3 @@ body, nav, ul, li, button, img, main {
   justify-content: center;
 }
 
-.vehicule-list{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 85vw;
-  gap: 40px;
-}
-
-.vehicule-item{
-  width: 400px;
-  height: 300px;
-}
-
-.vehicule-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 350px;
-  color: #fff;
-}
-
-.vehicule-photo{
-  width: 100%;
-}

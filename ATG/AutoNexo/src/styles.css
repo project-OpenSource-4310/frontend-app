@@ -2,3 +2,8 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body,h1,h2, nav, ul, li, button, img, main {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
