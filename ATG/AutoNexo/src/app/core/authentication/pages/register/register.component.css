@@ -1,0 +1,222 @@
+/*Necesario para alinear*/
+body{
+  margin: 0;
+  background-color: #080210 ;
+  height: 100vh;
+  width: 100vw;
+}
+
+body,main,button,div,span,img,label,p,a,input{
+  box-sizing: border-box;
+}
+
+.signIn-container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/*Logo completo*/
+.logo_complete-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.logo_image{
+  width: 60%;
+}
+.logo_name{
+  width: 80%;
+}
+
+/* FORMULARIO REGISTRAR*/
+
+/*definicion de orden */
+.form {
+  font-family: "Roboto",sans-serif;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  position: relative;
+  background-color: #fff;
+  color: #080210;
+  z-index: 0;
+}
+
+.form::after{
+  background: inherit;
+  position: absolute;
+  content: '';
+  filter: blur(25px) saturate(1.5);
+  width: 93%;
+  height: 97%;
+  scale: 1;
+  z-index: -1;
+}
+
+.form-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  line-height: 50px;
+}
+
+.text-body{
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.link{
+  color: #DD22EB;
+}
+
+.link:hover{
+  color: #540065;
+}
+
+/*Los primeros inputs(cajas)*/
+.inputs-container{
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+}
+
+.double-input {
+  display: flex;
+  width: 100%;
+  gap: 6px;
+}
+
+.form label {
+  position: relative;
+}
+
+.form label .input {
+  background-color: #F3BAFF;
+  color: #fff;
+  width: 100%;
+  padding: 20px 0 05px 10px;
+  outline: 0;
+  border: 0;
+  border-radius: 10px;
+}
+
+.form label .input + span {
+  color: #747474;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown + span {
+  top: 12.5px;
+  font-size: 14px;
+}
+
+.form label .input:focus + span,.form label .input:valid + span {
+  color: #DD22EB;
+  top: 3px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.form label .inputemail:not(:placeholder-shown) + span,.form label .inputemail:not(:placeholder-shown) + span {
+  color: #747474;
+  top: 3px;
+  font-size: 11px;
+}
+
+.form label .inputemail:not(:placeholder-shown):valid + span,.form label .inputemail:not(:placeholder-shown):valid + span {
+  color: #DD22EB;
+  top: 3px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.input {
+  font-size:16px;
+}
+
+/*Checkbox de términos */
+
+.another-container{
+  display: flex;
+  align-items: center;
+}
+
+.check input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.check {
+  position: relative;
+  cursor: pointer;
+  margin-right: 6px;
+}
+
+.checkmark {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 1.3em;
+  width: 1.3em;
+  background-color: #ccc;
+  transition: all 0.3s;
+  border-radius: 5px;
+}
+
+.check input:checked ~ .checkmark {
+  background-color: #F3BAFF;
+  animation: pop 0.5s;
+  animation-direction: alternate;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.check input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.check .checkmark:after {
+  left: 0.45em;
+  top: 0.25em;
+  width: 0.25em;
+  height: 0.5em;
+  border: solid #fff;
+  border-width: 0 0.15em 0.15em 0;
+  transform: rotate(45deg);
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

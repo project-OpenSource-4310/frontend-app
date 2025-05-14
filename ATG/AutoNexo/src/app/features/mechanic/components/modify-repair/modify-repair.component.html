@@ -1,0 +1,27 @@
+<app-side-bar></app-side-bar>
+<main class="modify-repair-container">
+  <div class="" ></div>
+  <h1 class="title">Modificar reparación</h1>
+  <h2 class="subtitle">
+    Cliente 1 - <span class="car">Kia Picanto 2019</span>
+  </h2>
+  <p class="cliente">Lucia Mendoza</p>
+
+  <div class="repair-card">
+    <div class="repair-field">Tipo de reparación</div>
+    <div class="repair-field">Cambio de parte en</div>
+    <div class="repair-field">El motor estuvo involucrado</div>
+    <div class="repair-field">
+      Inventario a emplear
+      <span class="icon">&#128295;</span>
+    </div>
+  </div>
+  <app-add-button (abrirDialogo)="activarDialogo()"></app-add-button>
+</main>
+<div class="dialog-overlay" *ngIf="mostrarDialogo">
+  <div class="dialog">
+    <p>Reparación modificada con éxito</p>
+    <button (click)="cerrarDialogo()">Aceptar</button>
+  </div>
+</div>
+

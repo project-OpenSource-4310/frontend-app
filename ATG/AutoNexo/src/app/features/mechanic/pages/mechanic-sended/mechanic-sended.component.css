@@ -1,0 +1,71 @@
+
+body, nav, ul, li, button, img, main {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.mechanic-sended{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-left: 70px;
+}
+
+.title{
+  font-family: "Montserrat", sans-serif;
+  font-size: 200px;
+  font-weight: 700;
+  line-height: 100px;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+.reparaciones-container {
+  padding: 2rem;
+  background-color: #7D0097;
+  height: 100vh;
+  color: white;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.reparaciones-grid {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.reparacion-card {
+  background-color: transparent;
+  border: 3px solid transparent;
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.reparacion-card:hover {
+  transform: scale(1.05);
+}
+.icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+}
+
+.info {
+  color: white;
+}
+
+.cliente {
+  font-style: italic;
+  opacity: 0.8;
+  margin-top: 0.3rem;
+}

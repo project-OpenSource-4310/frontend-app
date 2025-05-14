@@ -1,0 +1,31 @@
+<app-side-bar/>
+<div class="reparaciones-container">
+  <h1 class="title">Reparaciones enviadas</h1>
+
+  <div class="reparaciones-grid">
+    <button type="submit" class="reparacion-card selected" [routerLink]="['/modify-repair']">
+      <img src="recomendation-sended_icon.png" alt="wrench" class="icon" />
+      <div class="info">
+        <strong>Kia Picanto 2019</strong>
+        <p class="cliente">Lucía Mendoza</p>
+      </div>
+    </button>
+
+    <button class="reparacion-card" [routerLink]="['/modify-repair']">
+      <img src="recomendation-sended_icon.png"  alt="wrench" class="icon" />
+      <div class="info">
+        <strong>Kia Picanto 2019</strong>
+        <p class="cliente">Lucía Mendoza</p>
+      </div>
+    </button>
+
+    <button type="submit" class="reparacion-card" [routerLink]="['/modify-repair']">
+      <img src="recomendation-sended_icon.png" alt="wrench" class="icon" />
+      <div class="info">
+        <strong>Kia Picanto 2019</strong>
+        <p class="cliente">Lucía Mendoza</p>
+      </div>
+    </button>
+  </div>
+  <router-outlet></router-outlet>
+</div>
