@@ -1,136 +1,385 @@
 {
-  "user": [
-    {
-      "IdUser": "US001",
-      "password": "password_123",
-      "firstName": "Juan",
-      "lastName": "Pérez",
-      "phoneNumber": "+1234567890",
-      "email": "juan.perez@example.com",
-      "loginStatus": "active"
-    },
-    {
-      "IdUser": "US002",
-      "password": "password_456",
-      "firstName": "Carlos",
-      "lastName": "Palacios",
-      "phoneNumber": "+4567891011",
-      "email": "carlos.palacios@example.com",
-      "loginStatus": "inactive"
-    },
-    {
-      "IdUser": "US003",
-      "password": "password_789",
-      "firstName": "María",
-      "lastName": "Gómez",
-      "phoneNumber": "+1987654321",
-      "email": "maria.gomez@example.com",
-      "loginStatus": "inactive"
-    }
-  ],
-  "mechanic": [
-    {
-      "idMechanic": "M001",
-      "idUser": "US001"
-    },
-    {
-      "idMechanic": "M002",
-      "idUser": "US002"
-    }
-  ],
   "drivers": [
     {
-      "idDriver": "D001",
-      "idUser": "US003"
-    }
-  ],
-  "inventory": [
-    {
-      "idInventory": "IN001",
-      "idMechanic": "M001",
-      "name": "Herramientas básicas"
+      "id": 1,
+      "email": "driver1@gmail.com",
+      "password": "123",
+      "firstName": "Luis",
+      "lastName": "Cruz",
+      "phone": "999111222",
+      "vehicles_owned": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        12,
+        13,
+        14
+      ],
+      "assignment_requests_sent": [
+        1,
+        2,
+        3
+      ],
+      "maintenance_requests_received": [
+        1,
+        2,
+        3,
+        4
+      ]
     },
     {
-      "idInventory": "IN002",
-      "idMechanic": "M002",
-      "name": "Repuestos motor"
-    }
-  ],
-  "item": [
-    {
-      "idItem": "I001",
-      "idInventory": "IN001",
-      "name": "Destornillador",
-      "description": "Destornillador basico",
-      "quantity": 1,
-      "unitPrice": 70.50
+      "id": 2,
+      "email": "driver2@gmail.com",
+      "password": "123",
+      "firstName": "Ana",
+      "lastName": "Torres",
+      "phone": "988777666",
+      "vehicles_owned": [
+        6,
+        7,
+        8
+      ],
+      "assignment_requests_sent": [],
+      "maintenance_requests_received": []
     },
     {
-      "idItem": "I002",
-      "idInventory": "IN002",
-      "name": "Filtro",
-      "description": "Filtro basico",
-      "quantity": 1,
-      "unitPrice": 100.75
-    }
-  ],
-  "maintenanceRecords": [
-    {
-      "recordId": "RM001",
-      "carId": "CR001",
-      "idMechanic": "M001",
-      "idItem": "I001",
-      "maintenanceDate": "2023-05-15",
-      "description": "Cambio de aceite y filtro",
-      "totalCost": 120.50,
-      "status": "completed"
+      "id": 3,
+      "email": "driver3@gmail.com",
+      "password": "123",
+      "firstName": "Carlos",
+      "lastName": "Zevallos",
+      "phone": "977555444",
+      "vehicles_owned": [
+        9,
+        10,
+        11
+      ],
+      "assignment_requests_sent": [],
+      "maintenance_requests_received": []
     },
     {
-      "recordId": "RM002",
-      "carId": "CR001",
-      "idMechanic": "M001",
-      "idItem": "I002",
-      "maintenanceDate": "2023-06-20",
-      "description": "Revisión frenos",
-      "totalCost": 85.00,
-      "status": "pending"
+      "id": 4,
+      "email": "a@a",
+      "password": "a",
+      "firstName": "a",
+      "lastName": "a",
+      "phone": "a",
+      "vehicles_owned": [],
+      "assignment_requests_sent": [],
+      "maintenance_requests_received": []
     }
   ],
-  "maintenanceRequests": [
+  "mechanics": [
     {
-      "requestId": "RQ001",
-      "idMechanic": "M001",
-      "carId": "CR001",
-      "recordId": "RM002",
-      "requestDate": "2023-06-18",
-      "comment": "El conductor reporta sonido en los frenos",
-      "status": "approved"
-    }
-  ],
-  "car": [
-    {
-      "carId": "CR001",
-      "driverId": "D001",
-      "make": "Toyota",
-      "model": "Corolla",
-      "year": 2020,
-      "plate": "ABC123"
+      "id": 1,
+      "email": "mechanic1@gmail.com",
+      "password": "123",
+      "firstName": "Marco",
+      "lastName": "Vivanco",
+      "phone": "944333222",
+      "vehicles_assigned": [
+        1,
+        2,
+        12
+      ],
+      "assignment_requests_received": [
+        1,
+        2,
+        3
+      ],
+      "maintenance_requests_sent": [
+        1,
+        2,
+        3,
+        4
+      ]
     },
     {
-      "carId": "CR002",
-      "driverId": "D001",
+      "id": 2,
+      "email": "mechanic2@gmail.com",
+      "password": "123",
+      "firstName": "Sandra",
+      "lastName": "Meza",
+      "phone": "933111000",
+      "vehicles_assigned": [],
+      "assignment_requests_received": [],
+      "maintenance_requests_sent": []
+    },
+    {
+      "id": 3,
+      "email": "mechanic3@gmail.com",
+      "password": "123",
+      "firstName": "Lucía",
+      "lastName": "Fernández",
+      "phone": "922999888",
+      "vehicles_assigned": [],
+      "assignment_requests_received": [],
+      "maintenance_requests_sent": []
+    }
+  ],
+  "vehicles": [
+    {
+      "id": 1,
       "make": "Honda",
       "model": "Civic",
-      "year": 2019,
-      "plate": "XYZ789"
+      "year": "2011",
+      "plate": "DEF102",
+      "driverId": 1,
+      "mechanicId": 1,
+      "maintenances": [
+        1,
+        2
+      ]
     },
     {
-      "carId": "CR003",
-      "driverId": "D001",
-      "make": "Chevrolet",
-      "model": "Onix",
-      "year": 2019,
-      "plate": "UXO512"
+      "id": 2,
+      "make": "Honda",
+      "model": "CRV",
+      "year": "2016",
+      "plate": "DCC456",
+      "driverId": 1,
+      "mechanicId": 1,
+      "maintenances": [
+        4
+      ]
+    },
+    {
+      "id": 3,
+      "make": "Subaru",
+      "model": "Outback",
+      "year": "2017",
+      "plate": "SUB789",
+      "driverId": 1,
+      "mechanicId": 0,
+      "maintenances": []
+    },
+    {
+      "id": 4,
+      "make": "Honda",
+      "model": "Fit",
+      "year": "2018",
+      "plate": "FIT234",
+      "driverId": 1,
+      "mechanicId": 0,
+      "maintenances": []
+    },
+    {
+      "id": 5,
+      "make": "Subaru",
+      "model": "Impreza",
+      "year": "2018",
+      "plate": "IMP555",
+      "driverId": 1,
+      "mechanicId": 0,
+      "maintenances": []
+    },
+    {
+      "id": 6,
+      "make": "Hyundai",
+      "model": "Accent",
+      "year": "2014",
+      "plate": "HYA999",
+      "driverId": 2,
+      "mechanicId": 0,
+      "maintenances": []
+    },
+    {
+      "id": 7,
+      "make": "Hyundai",
+      "model": "Tucson",
+      "year": "2018",
+      "plate": "HYT123",
+      "driverId": 2,
+      "mechanicId": 0,
+      "maintenances": []
+    },
+    {
+      "id": 8,
+      "make": "Hyundai",
+      "model": "Elantra",
+      "year": "2016",
+      "plate": "HYE321",
+      "driverId": 2,
+      "mechanicId": 0,
+      "maintenances": []
+    },
+    {
+      "id": 9,
+      "make": "Toyota",
+      "model": "Corolla",
+      "year": "2018",
+      "plate": "TOC888",
+      "driverId": 3,
+      "mechanicId": 0,
+      "maintenances": []
+    },
+    {
+      "id": 10,
+      "make": "Toyota",
+      "model": "Hilux",
+      "year": "2017",
+      "plate": "TOH777",
+      "driverId": 3,
+      "mechanicId": 0,
+      "maintenances": []
+    },
+    {
+      "id": 11,
+      "make": "Toyota",
+      "model": "Yaris",
+      "year": "2014",
+      "plate": "TOY444",
+      "driverId": 3,
+      "mechanicId": 0,
+      "maintenances": []
+    },
+    {
+      "id": 12,
+      "make": "hyundai",
+      "model": "accent",
+      "year": "2018",
+      "plate": "caca",
+      "driverId": 1,
+      "mechanicId": 1,
+      "maintenances": [
+        3
+      ]
+    },
+    {
+      "id": 13,
+      "make": "hyundai",
+      "model": "tucson",
+      "year": "2014",
+      "plate": "vvvv",
+      "driverId": 1,
+      "mechanicId": 0,
+      "maintenances": []
+    },
+    {
+      "id": 14,
+      "make": "toyota",
+      "model": "prado",
+      "year": "2015",
+      "plate": "hhh",
+      "driverId": 1,
+      "mechanicId": 0,
+      "maintenances": []
+    }
+  ],
+  "assignment_requests": [
+    {
+      "id": 1,
+      "description": "wasa",
+      "vehicleId": 1,
+      "driverId": 1,
+      "mechanicId": 1,
+      "accepted": true
+    },
+    {
+      "id": 2,
+      "description": "caesss",
+      "vehicleId": 2,
+      "driverId": 1,
+      "mechanicId": 1,
+      "accepted": true
+    },
+    {
+      "id": 3,
+      "description": "gaaa",
+      "vehicleId": 12,
+      "driverId": 1,
+      "mechanicId": 1,
+      "accepted": true
+    }
+  ],
+  "maintenance_requests": [
+    {
+      "id": 1,
+      "title": "deeee",
+      "description": "asd",
+      "budget": "1",
+      "vehicleId": 1,
+      "driverId": 1,
+      "mechanicId": 1,
+      "accepted": true
+    },
+    {
+      "id": 2,
+      "title": "hff",
+      "description": "ddd",
+      "budget": "213",
+      "vehicleId": 1,
+      "driverId": 1,
+      "mechanicId": 1,
+      "accepted": true
+    },
+    {
+      "id": 3,
+      "title": "gggg",
+      "description": "aa",
+      "budget": "133",
+      "vehicleId": 12,
+      "driverId": 1,
+      "mechanicId": 1,
+      "accepted": true
+    },
+    {
+      "id": 4,
+      "title": "gghhh",
+      "description": "da",
+      "budget": "666",
+      "vehicleId": 2,
+      "driverId": 1,
+      "mechanicId": 1,
+      "accepted": true
+    }
+  ],
+  "maintenances": [
+    {
+      "id": 1,
+      "title": "deeee",
+      "description": "asd",
+      "budget": "1",
+      "vehicleId": 1,
+      "mechanicId": 1,
+      "driverId": 1,
+      "requestId": 1,
+      "completed": false
+    },
+    {
+      "id": 2,
+      "title": "hff",
+      "description": "ddd",
+      "budget": "213",
+      "vehicleId": 1,
+      "mechanicId": 1,
+      "driverId": 1,
+      "requestId": 2,
+      "completed": false
+    },
+    {
+      "id": 3,
+      "title": "gggg",
+      "description": "aa",
+      "budget": "133",
+      "vehicleId": 12,
+      "mechanicId": 1,
+      "driverId": 1,
+      "requestId": 3,
+      "completed": false
+    },
+    {
+      "id": 4,
+      "title": "gghhh",
+      "description": "da",
+      "budget": "666",
+      "vehicleId": 2,
+      "mechanicId": 1,
+      "driverId": 1,
+      "requestId": 4,
+      "completed": false
     }
   ]
 }
