@@ -1,0 +1,13 @@
+<main class="authentication-container">
+  <div class="logo_complete-container">
+    <img class="logo_image" src="/img/logo-image.png" alt="logo-image">
+    <img class="logo_name" src="/img/logo-name.png" alt="logo-name">
+  </div>
+  <div class="buttons-container">
+    <button class="main-button signIn" [routerLink]="'/authentication/register'">{{'auth.register'|translate}}</button>
+    <button class="main-button logIn" [routerLink]="'/authentication/login'">{{'auth.login'|translate}}</button>
+  </div>
+  <app-language-switcher/>
+  <router-outlet/>
+</main>
+
