@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ec5ec4e5-89be-4dfa-aa04-5a5491213f8c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ATG/AutoNexo/src/app/features/driver/components/driver-profile/driver-profile.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ATG/AutoNexo/src/app/features/driver/components/driver-profile/driver-profile.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ATG/AutoNexo/src/app/features/driver/components/driver-profile/driver-profile.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ATG/AutoNexo/src/app/features/driver/models/assignment-request.entity.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ATG/AutoNexo/src/app/features/driver/models/maintenance.entity.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ATG/AutoNexo/src/app/features/driver/models/vehicle.entity.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ATG/AutoNexo/src/app/features/driver/pages/driver-page/driver-page.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ATG/AutoNexo/src/app/features/driver/pages/driver-page/driver-page.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ATG/AutoNexo/src/app/features/driver/pages/driver-page/driver-page.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ATG/AutoNexo/src/app/features/driver/services/assignment-request.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ATG/AutoNexo/src/app/features/driver/services/maintenance.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ATG/AutoNexo/src/app/features/driver/services/vehicle.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATG/AutoNexo/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ATG/AutoNexo/src/app/app.routes.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2ykCB3mYfHHiROrrS2JYU3fBTgI" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/driver-profile&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/UPC/Open Source/TB2/TB2-REPOSITORY/frontend-app/ATG/AutoNexo/src/app/features/driver/services&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\UPC\\Open Source\\TB2\\TB2-REPOSITORY\\frontend-app\\ATG\\AutoNexo\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\UPC\Open Source\TB2\TB2-REPOSITORY\frontend-app\ATG\AutoNexo\src\app\features\driver\services" />
+      <recent name="D:\UPC\Open Source\TB2\TB2-REPOSITORY\frontend-app\ATG\AutoNexo\src\app\features\driver\models" />
+      <recent name="D:\UPC\Open Source\TB2\TB2-REPOSITORY\frontend-app\ATG\AutoNexo\src\app\features\driver\pages" />
+      <recent name="D:\UPC\Open Source\TB2\TB2-REPOSITORY\frontend-app\ATG\AutoNexo\src\app\features\driver\components" />
+      <recent name="D:\UPC\Open Source\TB2\TB2-REPOSITORY\frontend-app\ATG\AutoNexo\src\app\features\authentication\components" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-WS-251.23774.424" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ec5ec4e5-89be-4dfa-aa04-5a5491213f8c" name="Changes" comment="" />
+      <created>1750369045854</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1750369045854</updated>
+      <workItem from="1750369047115" duration="6650000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
