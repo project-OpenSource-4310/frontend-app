@@ -1,0 +1,61 @@
+<app-goback-button/>
+<div class="role-selection">
+  <p class="subtitle_italic-body">{{ 'auth.roleQuestion' | translate }}</p>
+
+  <label class="selection-button driver">
+    <input type="radio" name="role" value="driver" hidden (click)="selectRole('driver')">
+    <span>{{ 'general.driver' | translate }}</span>
+  </label>
+
+  <label class="selection-button mechanic">
+    <input type="radio" name="role" value="mechanic" hidden (click)="selectRole('mechanic')">
+    <span>{{ 'general.mechanic' | translate }}</span>
+  </label>
+</div>
+<mat-spinner class="spinner" *ngIf="loading" diameter="50"></mat-spinner>
+<form class="form" *ngIf="!loading" [formGroup]="form" (ngSubmit)="register()">
+  <h1 class="form-title">{{ 'auth.register' | translate }}</h1>
+  <p class="text-body">{{ 'auth.registerMessage' | translate }}</p>
+  <div class="inputs-container">
+    <div class="double-input">
+      <label>
+        <input class="input" type="text" placeholder="" required="" formControlName="firstName">
+        <span>{{ 'auth.firstName' | translate }}</span>
+      </label>
+      <label>
+        <input class="input" type="text" placeholder="" required="" formControlName="lastName">
+        <span>{{ 'auth.lastName' | translate }}</span>
+      </label>
+    </div>
+    <label>
+      <input class="input" type="text" placeholder="" required="" formControlName="phone">
+      <span>{{ 'auth.phone' | translate }}</span>
+    </label>
+    <label>
+      <input class="input inputemail" type="email" placeholder="" required="" formControlName="email">
+      <span>{{ 'auth.email' | translate }}</span>
+    </label>
+    <label>
+      <input class="input" type="password" placeholder="" required="" formControlName="password">
+      <span>{{ 'auth.password' | translate }}</span>
+    </label>
+    <label>
+      <input class="input" type="password" placeholder="" required="" formControlName="confirmPassword">
+      <span>{{ 'auth.confirmPassword' | translate }}</span>
+    </label>
+  </div>
+  <div class="another-container">
+    <label class="check">
+      <input type="checkbox" formControlName="termsAccepted">
+      <div class="checkmark"></div>
+    </label>
+    <p class="text-body">
+      {{ 'auth.accept' | translate }}
+      <a class="link" [routerLink]="'/terms-and-conditions'">{{ 'auth.terms' | translate }}</a>
+    </p>
+  </div>
+  <app-classic-button [disabled]="form.invalid" >{{ 'auth.register' | translate }}</app-classic-button>
+  <p class="text-body">
+    {{ 'auth.alreadyHaveAccount' | translate }} ? <a class="link" [routerLink]="'/authentication/login'">{{ 'auth.login' | translate }}</a>
+  </p>
+</form>
