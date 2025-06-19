@@ -1,0 +1,30 @@
+<app-goback-button/>
+<mat-spinner class="spinner" *ngIf="loading" diameter="50"></mat-spinner>
+<form class="form" *ngIf="!loading" [formGroup]="form" (ngSubmit)="access()">
+  <h1 class="form-title">{{ 'auth.login' | translate }}</h1>
+  <p class="text-body">{{ 'auth.loginMessage' | translate }}</p>
+  <div class="inputs-container">
+    <label>
+      <input class="input inputemail" type="email" placeholder="" required="" formControlName="email">
+      <span>{{ 'auth.email' | translate }}</span>
+    </label>
+    <label>
+      <input class="input" type="password" placeholder="" required="" formControlName="password">
+      <span>{{ 'auth.password' | translate }}</span>
+    </label>
+  </div>
+  <div class="another-container">
+    <div class="check-item">
+      <label class="check">
+        <input type="checkbox">
+        <div class="checkmark"></div>
+      </label>
+      <p class="text-body">{{ 'auth.rememberMe' | translate }} <a class="link forget" [routerLink]="'/authentication/forgot-password'">{{ 'auth.forgotPassword' | translate }}</a>
+      </p>
+    </div>
+  </div>
+  <app-classic-button [disabled]="form.invalid">{{ 'auth.login' | translate }}</app-classic-button>
+  <p class="text-body">
+    {{ 'auth.noAccount' | translate }} <a class="link" [routerLink]="'/authentication/register'">{{ 'auth.register' | translate }}</a>
+  </p>
+</form>
