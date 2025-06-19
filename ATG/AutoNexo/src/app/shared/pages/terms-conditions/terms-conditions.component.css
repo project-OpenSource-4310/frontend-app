@@ -1,0 +1,75 @@
+body{
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #080210;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  overflow-x: hidden;
+}
+app-language-switcher{
+  position: fixed;
+  left: 3%;
+  top: 50%;
+}
+
+/*TERMINOS*/
+.terms-container{
+  max-width: 750px;
+  min-width: 400px;
+  margin: 50px;
+  background-color: #fff;
+  color: #080210;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.terms-container::after{
+  background: inherit;
+  position: absolute;
+  content: '';
+  filter: blur(25px) saturate(1.5);
+  width: 97%;
+  height: 99%;
+  scale: 1;
+  z-index: -1;
+}
+
+.terms-title{
+  font-family: "Montserrat", sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: #DD22EB;
+  margin: 20px 0;
+  line-height: 50px;
+}
+
+.title-body{
+  font-family: "Roboto",sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  color: #DD22EB;
+  margin: 15px 0;
+  line-height: 37px;
+}
+
+.text-body{
+  font-family: "Roboto",sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 5px 0;
+  line-height: 19px;
+}
+
+.link{
+  color: #DD22EB;
+}
+
+.link:hover{
+  color: #540065;
+}

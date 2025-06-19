@@ -1,0 +1,23 @@
+.submit {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #fff;
+  border-radius: 30px;
+  padding: 10px;
+  outline-offset: -3px;
+  border: none;
+  transition: 400ms;
+  background-color: #DD22EB;
+  outline: 3px #DD22EB solid;
+  cursor:pointer;
+  margin: 5px 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.submit:hover {
+  background-color: transparent;
+  color: #DD22EB;
+}
