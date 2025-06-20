@@ -47,7 +47,6 @@
 
 .vehicle-card {
   width: 350px; /* Ancho fijo para cada tarjeta */
-  flex: 1 1 350px; /* Asegura que el ancho se ajuste bien en pantallas más pequeñas */
   margin: 10px;
   display: flex;
   flex-direction: column;
