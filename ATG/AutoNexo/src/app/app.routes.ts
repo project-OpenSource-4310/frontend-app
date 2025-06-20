@@ -29,6 +29,8 @@ const AssignmentRequestReceivedComponent=()=>import('./features/mechanic/compone
 const MaintenanceRequestSentComponent=()=>import('./features/mechanic/components/maintenance-request-sent/maintenance-request-sent.component').then(m=>m.MaintenanceRequestSentComponent);
 const SendMaintenanceRequestComponent=()=>import('./features/mechanic/components/send-maintenance-request/send-maintenance-request.component').then(m=>m.SendMaintenanceRequestComponent);
 const MechanicProfileComponent=()=>import('./features/mechanic/components/mechanic-profile/mechanic-profile.component').then(m=>m.MechanicProfileComponent);
+const AddInventoryComponent=()=>import('./features/mechanic/components/add-inventory/add-inventory.component').then(m=>m.AddInventoryComponent);
+const InventoryComponent=()=>import('./features/mechanic/components/inventory/inventory.component').then(m=>m.InventoryComponent);
 
 export const routes: Routes = [
   { path: 'authentication',component:AuthenticationPageComponent,
@@ -49,8 +51,8 @@ export const routes: Routes = [
       {path:'requests-sent',loadComponent:DriverRequestsSentComponent},
       {path:'assignment-request',loadComponent:AssignmentRequestSentComponent},
       {path:'maintenance-request',loadComponent:MaintenanceRequestReceivedComponent},
-      {path:'profile',loadComponent:MechanicProfileComponent},
       {path:'profile',loadComponent:DriverProfileComponent},
+
     ]},
   {path:'mechanic-page',loadComponent:MechanicPageComponent,
     children:[
@@ -61,6 +63,9 @@ export const routes: Routes = [
       {path:'requests-sent',loadComponent:MechanicRequestsSentComponent},
       {path:'maintenance-request',loadComponent:MaintenanceRequestSentComponent},
       {path:'vehicle',loadComponent:MechanicVehicleComponent},
+      {path:'profile',loadComponent:MechanicProfileComponent},
+      {path:'add-inventory', loadComponent: AddInventoryComponent},
+      {path:'inventory',loadComponent:InventoryComponent},
     ]},
   {path:'**',loadComponent:PageNotFoundComponent},
 ];
