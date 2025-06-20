@@ -1,15 +1,18 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {RouterOutlet} from '@angular/router';
+import {NavigationEnd, Router, RouterOutlet} from '@angular/router';
 import {SideBarComponent} from '../../../../shared/components/side-bar/side-bar.component';
 import {MechanicService} from '../../../authentication/services/mechanic.service';
 import {Mechanic} from '../../../authentication/models/mechanic.entity';
+import {NgIf} from '@angular/common';
+import {filter} from 'rxjs';
 
 @Component({
   selector: 'app-mechanic-page',
   imports: [
 
     SideBarComponent,
-    RouterOutlet
+    RouterOutlet,
+    NgIf
   ],
   templateUrl: './mechanic-page.component.html',
   styleUrl: './mechanic-page.component.css',
@@ -17,10 +20,11 @@ import {Mechanic} from '../../../authentication/models/mechanic.entity';
 })
 export class MechanicPageComponent implements OnInit {
   mechanic?: Mechanic;
-
-  constructor(private mechanicService:MechanicService) {}
+  isMainPage: boolean = false;
+  constructor(private mechanicService:MechanicService, private router: Router) {}
 
   ngOnInit(){
+    this.isMainPage = this.router.url === '/mechanic-page';
     const userData=localStorage.getItem('user');
     if(userData){
       const {id,role}=JSON.parse(userData);
@@ -30,6 +34,12 @@ export class MechanicPageComponent implements OnInit {
         })
       }
     }
+    // Suscribirse a los eventos de navegación
+    this.router.events
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe((event: NavigationEnd) => {
+        this.isMainPage = event.urlAfterRedirects === '/mechanic-page';
+      });
   }
   mechanicOptions = [
     { class: 'profile-button', link: '/mechanic-page/profile', src: '/img/profile-icon.png' },

@@ -11,8 +11,11 @@ body {
   top: 50%;
   left: 50%;
 }
-app-language-switcher{
+.center-title {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 40%;
+  left: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
