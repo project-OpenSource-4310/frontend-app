@@ -1,0 +1,84 @@
+body {
+  background-color: #f8d1ff;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: hidden !important;
+}
+
+/* ver vehicule section*/
+.driver-vehicle {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 80px;
+  padding-top: 3%;
+}
+
+.titles-container{
+  text-align: center;
+  height: 12%;
+}
+.title{
+  font-family: "Montserrat", sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 50px;
+  color: #080210;
+}
+
+.subtitle{
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 36px;
+  color: #080210;
+}
+
+.vehicle-section{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  height: 85%;
+  gap: 100px;
+}
+
+.options-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  height: 100%;
+  padding-top:50px;
+  gap: 50px;
+}
+
+.vehicle-container {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.vehicle-image {
+  height: 300px;
+  position: relative;
+  top: 13.5vw;
+  z-index: 10;
+}
+
+.platform {
+  width: 700px;
+  height: 170px;
+  border-radius: 50%;
+  background-color: #080210;
+  box-shadow: 0 20px 8px rgba(0, 0, 0, 0.6);
+  z-index: 5;
+  position: absolute;
+  bottom: 10%;
+}

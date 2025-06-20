@@ -1,0 +1,65 @@
+<app-goback-button/>
+<main class="add-vehicle">
+  <h1 class="title">Agregar Vehiculo</h1>
+  <div class="vehicle-data">
+    <form class="form" >
+      <h2 class="form-title">Photo</h2>
+      <div class="inputs-container">
+        <label>
+          <input class="input" type="file" placeholder="">
+          <span>Foto del vehiculo</span>
+        </label>
+      </div>
+    </form>
+    <form class="form" [formGroup]="form" (ngSubmit)="addVehicle()">
+      <h2 class="form-title">Vehicle Info</h2>
+      <div class="inputs-container">
+
+        <!-- Marca -->
+        <label>
+          <select class="input" formControlName="make" (change)="onMakeChange($event)">
+            <option value="" disabled selected>Selecciona una marca</option>
+            <option *ngFor="let make of makes" [value]="make">{{ make }}</option>
+          </select>
+          <span>Marca</span>
+        </label>
+
+        <!-- Modelo -->
+        <label>
+          <select class="input" formControlName="model" (change)="onModelChange($event)" [disabled]="!models.length">
+            <option value="" disabled selected>Selecciona un modelo</option>
+            <option *ngFor="let model of models" [value]="model">{{ model }}</option>
+          </select>
+          <span>Modelo</span>
+        </label>
+
+
+        <!-- Año -->
+        <label>
+          <select class="input" formControlName="year" [disabled]="!years.length">
+            <option value="" disabled selected>Selecciona un año</option>
+            <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+          </select>
+          <span>Año</span>
+        </label>
+
+        <!-- Placa -->
+        <label>
+          <input class="input" type="text" placeholder="" required formControlName="plate">
+          <span>Placa</span>
+        </label>
+      </div>
+
+      <app-classic-button [disabled]="form.invalid">Agregar</app-classic-button>
+    </form>
+    <form class="form" >
+      <h2 class="form-title">Historial del vehiculo</h2>
+      <div class="inputs-container">
+        <label>
+          <input class="input" type="text" placeholder="">
+          <span>Historial</span>
+        </label>
+      </div>
+    </form>
+  </div>
+</main>
