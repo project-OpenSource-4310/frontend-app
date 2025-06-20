@@ -7,4 +7,6 @@ export const environment={
   assignmentRequestsEndpointPath:'/assignment_requests',
   maintenanceRequestsEndpointPath:'/maintenance_requests',
   maintenancesEndpointPath:'/maintenances',
+  inventoriesEndpointPath:'/inventories',
+  itemsEndpointPath:'/items',
   };

@@ -31,7 +31,7 @@ const SendMaintenanceRequestComponent=()=>import('./features/mechanic/components
 const MechanicProfileComponent=()=>import('./features/mechanic/components/mechanic-profile/mechanic-profile.component').then(m=>m.MechanicProfileComponent);
 const AddInventoryComponent=()=>import('./features/mechanic/components/add-inventory/add-inventory.component').then(m=>m.AddInventoryComponent);
 const InventoryComponent=()=>import('./features/mechanic/components/inventory/inventory.component').then(m=>m.InventoryComponent);
-
+const MechanicStorageComponent=()=>import('./features/mechanic/components/mechanic-storage/mechanic-storage.component').then(m=>m.MechanicStorageComponent);
 export const routes: Routes = [
   { path: 'authentication',component:AuthenticationPageComponent,
     children: [
@@ -46,6 +46,7 @@ export const routes: Routes = [
       {path:'home',loadComponent:DriverHomeComponent},
       {path:'requests-received',loadComponent:DriverRequestsReceivedComponent},
       {path:'add-vehicle', loadComponent: AddVehicleComponent},
+
       {path:'vehicle',loadComponent:DriverVehicleComponent},
       {path:'send-request',loadComponent:SendAssignmentRequestComponent},
       {path:'requests-sent',loadComponent:DriverRequestsSentComponent},
@@ -66,6 +67,7 @@ export const routes: Routes = [
       {path:'profile',loadComponent:MechanicProfileComponent},
       {path:'add-inventory', loadComponent: AddInventoryComponent},
       {path:'inventory',loadComponent:InventoryComponent},
+      {path:'storage',loadComponent:MechanicStorageComponent},
     ]},
   {path:'**',loadComponent:PageNotFoundComponent},
 ];

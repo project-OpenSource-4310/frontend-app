@@ -32,7 +32,25 @@ export class MechanicService extends BaseService<Mechanic> {
       catchError(this.handleError)
     );
   }
+  addInventoryToMechanic(mechanicId: number, inventoryId: number) {
+    const url = `${this.resourcePath()}/${mechanicId}`;
 
+    return this.getById(mechanicId).pipe(
+      switchMap((mechanic) => {
+        const updatedInventories = Array.isArray(mechanic.inventories)
+          ? [...mechanic.inventories, inventoryId]
+          : [inventoryId];
+
+        const updatedMechanic = {
+          ...mechanic,
+          inventories: [...new Set(updatedInventories)] // evita duplicados
+        };
+
+        return this.http.put(url, JSON.stringify(updatedMechanic), this.httpOptions);
+      }),
+      catchError(this.handleError)
+    );
+  }
   removeVehicleFromMechanic(mechanicId: number, vehicleId: number) {
     const url = `${this.resourcePath()}/${mechanicId}`;
 

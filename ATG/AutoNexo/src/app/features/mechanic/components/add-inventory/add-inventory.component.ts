@@ -2,7 +2,7 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Inventory } from '../../models/inventory.entity';
+
 import { InventoryService } from '../../services/inventory.service';
 import { MechanicService } from '../../../authentication/services/mechanic.service';
 import { ClassicButtonComponent } from '../../../../shared/components/buttons/classic-button/classic-button.component';
@@ -11,7 +11,8 @@ import {NgForOf} from '@angular/common';
 import {AddButtonComponent} from '../../../../shared/components/buttons/add-button/add-button.component';
 import { firstValueFrom } from 'rxjs';
 import { Item } from '../../models/item.entity';
-import {ItemService} from '../../services/item.service'; // Asegúrate que esta importación esté
+import {ItemService} from '../../services/item.service';
+import { Inventory } from '../../models/inventory.entity';
 
 @Component({
   selector: 'app-add-inventory',
