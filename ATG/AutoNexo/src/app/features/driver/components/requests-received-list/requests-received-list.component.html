@@ -1,0 +1,14 @@
+<div class="request-cards-container">
+  <div *ngFor="let request of requests" class="request-card">
+    <mat-card class="card">
+      <mat-card-content class="card-content">
+        <img class="letter" src="/img/letter-image.png" alt="">
+        <h3 class="body-title">Vehículo: {{ request.vehicle }}</h3>
+        <p class="body-text">Mecánico: {{ request.mechanic }}</p>
+      </mat-card-content>
+      <mat-card-actions class="card-actions">
+        <app-classic-button (click)="viewRequest(request.id)">Ver Request</app-classic-button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

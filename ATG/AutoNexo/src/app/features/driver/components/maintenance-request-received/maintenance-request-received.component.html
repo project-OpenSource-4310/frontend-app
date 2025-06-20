@@ -1,0 +1,24 @@
+<app-goback-button />
+<main class="main-request-received" *ngIf="request">
+  <!-- Sección superior -->
+  <div class="top-section">
+    <h1 class="title">Solicitud #{{ request.id }}</h1>
+    <h2 class="title">Vehículo: {{ vehicleInfo }}</h2>
+    <h2 class="title">Mecánico: {{ mechanicName }}</h2>
+    <app-decisions-button (accept)="acceptRequest()" (deny)="denyRequest()" />
+  </div>
+
+  <!-- Sección inferior -->
+  <div class="bottom-section">
+    <div class="request-detail-container">
+      <div class="titles-container">
+        <p class="body-text">{{ request.title }}</p>
+        <p class="body-text">Descripción:</p>
+        <p class="body-text">"{{ request.description }}"</p>
+        <p class="body-text">Presupuesto: S/ {{ request.budget }}</p>
+        <p class="body-text">Estado: {{ request.accepted ? 'Aceptada' : 'Pendiente' }}</p>
+      </div>
+    </div>
+    <app-history-button />
+  </div>
+</main>
