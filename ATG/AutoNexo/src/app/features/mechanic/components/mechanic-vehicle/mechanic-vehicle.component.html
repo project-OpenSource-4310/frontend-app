@@ -1,0 +1,19 @@
+<app-goback-button />
+<main class="mechanic-vehicle" *ngIf="vehicle">
+  <div class="titles-container">
+    <h2 class="subtitle">{{ vehicle.make }} {{ vehicle.model }} {{ vehicle.year }}</h2>
+    <h2 class="subtitle">Placa: {{ vehicle.plate }}</h2>
+    <h2 class="subtitle">Driver: {{driverName}}</h2>
+  </div>
+  <div class="vehicle-section">
+    <div class="options-container">
+      <app-history-button/>
+      <app-add-reparation-button [routerLink]="'/mechanic-page/send-request'"/>
+    </div>
+    <div class="vehicle-container">
+      <img class="vehicle-image" [src]="getVehicleImageUrl()" alt="imagen del vehículo">
+      <div class="platform"></div>
+    </div>
+    <app-maintenances-list/>
+  </div>
+</main>
