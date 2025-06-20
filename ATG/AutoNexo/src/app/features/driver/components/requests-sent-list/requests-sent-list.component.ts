@@ -1,7 +1,7 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {ClassicButtonComponent} from "../../../../shared/components/buttons/classic-button/classic-button.component";
 import {MatCard, MatCardActions, MatCardContent} from "@angular/material/card";
-import {NgForOf} from "@angular/common";
+import {NgForOf, NgIf} from "@angular/common";
 import {AssignmentRequestService} from '../../services/assignment-request.service';
 import {DriverService} from '../../../authentication/services/driver.service';
 import {MechanicService} from '../../../authentication/services/mechanic.service';
@@ -11,13 +11,14 @@ import {forkJoin} from 'rxjs';
 
 @Component({
   selector: 'app-requests-sent-list',
-    imports: [
-        ClassicButtonComponent,
-        MatCard,
-        MatCardActions,
-        MatCardContent,
-        NgForOf
-    ],
+  imports: [
+    ClassicButtonComponent,
+    MatCard,
+    MatCardActions,
+    MatCardContent,
+    NgForOf,
+    NgIf
+  ],
   templateUrl: './requests-sent-list.component.html',
   styleUrl: './requests-sent-list.component.css',
   encapsulation: ViewEncapsulation.None

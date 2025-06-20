@@ -1,4 +1,7 @@
 <div class="vehicle-cards-container">
+  <p class="empty-message" *ngIf="vehicles.length === 0">
+    No tienes ningún vehículo asignado.
+  </p>
   <div *ngFor="let vehicle of vehicles" class="vehicle-card">
     <mat-card class="card">
       <div class="card-header">

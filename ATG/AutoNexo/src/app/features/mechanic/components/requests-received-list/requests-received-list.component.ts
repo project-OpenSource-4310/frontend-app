@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ClassicButtonComponent } from "../../../../shared/components/buttons/classic-button/classic-button.component";
 import { MatCard, MatCardActions, MatCardContent } from "@angular/material/card";
-import { NgForOf } from "@angular/common";
+import {NgForOf, NgIf} from "@angular/common";
 import { DriverService } from '../../../authentication/services/driver.service';
 import { MechanicService } from '../../../authentication/services/mechanic.service';
 import { Router } from '@angular/router';
@@ -16,7 +16,8 @@ import {VehicleService} from '../../../driver/services/vehicle.service';
     MatCard,
     MatCardActions,
     MatCardContent,
-    NgForOf
+    NgForOf,
+    NgIf
   ],
   templateUrl: './requests-received-list.component.html',
   styleUrl: './requests-received-list.component.css',

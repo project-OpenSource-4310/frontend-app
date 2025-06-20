@@ -1,4 +1,8 @@
 <div class="request-cards-container">
+  <p class="empty-message" *ngIf="requests.length === 0">
+    No has enviado ninguna solicitud de asignación
+  </p>
+
   <div *ngFor="let request of requests" class="request-card">
     <mat-card class="card">
       <mat-card-content class="card-content">
