@@ -1,0 +1,22 @@
+<div class="vehicle-cards-container">
+  <p class="empty-message" *ngIf="vehicles.length === 0">
+    No tienes ningún vehículo asignado.
+  </p>
+  <div *ngFor="let vehicle of vehicles" class="vehicle-card">
+    <mat-card class="card">
+      <div class="card-header">
+        <h3 class="body-title">{{ vehicle.make }}</h3>
+        <p class="body-text">Plate: {{ vehicle.plate }}</p>
+        <!-- ACA IRIA EL NOMBRE DEL CLIENTE -->
+        <p class="body-text">id: {{ vehicle.id }}</p>
+        <p class="body-text">Year: {{ vehicle.year }}</p>
+      </div>
+      <mat-card-content class="card-content">
+        <p class="body-text">Marca: {{ vehicle.model }}</p>
+      </mat-card-content>
+      <mat-card-actions class="card-actions">
+        <app-classic-button (click)="viewVehicle(vehicle.id)">Ver Vehiculo</app-classic-button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

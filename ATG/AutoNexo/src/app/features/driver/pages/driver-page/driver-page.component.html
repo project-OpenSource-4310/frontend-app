@@ -1,0 +1,7 @@
+<div *ngIf="isMainPage" class="center-title">
+  <h1>Bienvenido {{driver?.firstName}}!!!</h1>
+  <h1>Muchas gracias por usar nuestra aplicación</h1>
+  <h1>Usa la Side Bar para acceder a las distintas funcionalidades</h1>
+</div>
+<app-side-bar [options]="driverOptions"></app-side-bar>
+<router-outlet/>

@@ -1,0 +1,7 @@
+<div class="maintenances-card">
+  <h2 class="maintenances-title">Mantenimientos</h2>
+  <div class="maintenance-row" *ngFor="let maintenance of maintenances">
+    <p class="maintenance-title">{{ maintenance.title }}</p>
+    <app-classic-button>Ver</app-classic-button>
+  </div>
+</div>

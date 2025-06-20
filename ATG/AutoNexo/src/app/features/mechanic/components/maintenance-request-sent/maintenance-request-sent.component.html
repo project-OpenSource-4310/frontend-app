@@ -1,0 +1,18 @@
+<app-goback-button />
+<main class="request-detail-main">
+  <div class="request-detail-container" *ngIf="request">
+    <div class="image-section">
+      <img class="letter" src="/img/letter-image.png" alt="Carta">
+    </div>
+    <div class="titles-container">
+      <h2 class="body-title">Solicitud #{{ request.id }}</h2>
+      <h2 class="body-title">{{ request.title }}</h2>
+      <p class="body-text">Vehículo: {{ vehicleInfo }}</p>
+      <p class="body-text">Driver: {{ driverName }}</p>
+      <p class="body-text">Descripción:</p>
+      <p class="body-text">"{{ request.description }}"</p>
+      <p class="body-text">Presupuesto: S/ {{ request.budget }}</p>
+      <p class="body-text">Estado: {{ request.accepted ? 'Aceptada' : 'Pendiente' }}</p>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,72 @@
+.authentication-container{
+  background-color: #080210 ;
+  width:100vw;
+  height:100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo_complete-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.logo_image{
+  width: 60%;
+}
+.logo_name{
+  width: 80%;
+}
+
+.buttons-container{
+  justify-content: center;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  margin: 10px 25px;
+  height: 50px;
+  width: 300px;
+  border-radius: 30px;
+  outline-offset: -3px;
+  border: none;
+  cursor: pointer;
+  transition: 400ms;
+  background-color: transparent;
+}
+.signIn{
+  color: #fff;
+  outline: 3px #fff solid;
+
+}
+.logIn{
+  color: #DD22EB;
+  outline: 3px #DD22EB solid;
+}
+.main-button:hover{
+  color: #080210;
+}
+.signIn:hover{
+  background-color: #fff;
+}
+.logIn:hover{
+  background-color: #DD22EB;
+}
+app-language-switcher {
+  position: absolute;
+  bottom: 50px;
+}

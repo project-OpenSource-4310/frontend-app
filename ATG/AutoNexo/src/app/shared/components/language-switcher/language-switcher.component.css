@@ -1,0 +1,19 @@
+mat-button-toggle-group{
+  border: 3px solid #DD22EB;
+}
+mat-button-toggle.mat-button-toggle-checked {
+  background-color: #DD22EB; /* Tu color personalizado */
+  color: white; /* Texto blanco si quieres más contraste */
+}
+
+/* Botones NO seleccionados */
+mat-button-toggle:not(.mat-button-toggle-checked) {
+
+  color: white; /* opcional: para que el texto no desaparezca */
+}
+
+/* Opcional: transición suave */
+mat-button-toggle {
+  transition: background-color 0.3s ease;
+}
+
