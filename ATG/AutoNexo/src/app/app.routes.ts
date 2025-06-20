@@ -18,6 +18,7 @@ const AssignmentRequestSentComponent=()=>import('./features/driver/components/as
 const MaintenanceRequestReceivedComponent=()=>import('./features/driver/components/maintenance-request-received/maintenance-request-received.component').then(m=>m.MaintenanceRequestReceivedComponent);
 const DriverRequestsReceivedComponent=()=>import('./features/driver/components/driver-requests-received/driver-requests-received.component').then(m=>m.DriverRequestsReceivedComponent);
 const DriverProfileComponent=()=>import('./features/driver/components/driver-profile/driver-profile.component').then(m=>m.DriverProfileComponent);
+const DriverConfigComponent=()=>import('./features/driver/components/driver-config/driver-config.component').then(m=>m.DriverConfigComponent);
 
 // MECHANIC
 const MechanicPageComponent =()=>import('./features/mechanic/pages/mechanic-page/mechanic-page.component').then(m=>m.MechanicPageComponent);
@@ -31,7 +32,7 @@ const SendMaintenanceRequestComponent=()=>import('./features/mechanic/components
 const MechanicProfileComponent=()=>import('./features/mechanic/components/mechanic-profile/mechanic-profile.component').then(m=>m.MechanicProfileComponent);
 const AddInventoryComponent=()=>import('./features/mechanic/components/add-inventory/add-inventory.component').then(m=>m.AddInventoryComponent);
 const InventoryComponent=()=>import('./features/mechanic/components/inventory/inventory.component').then(m=>m.InventoryComponent);
-const MechanicStorageComponent=()=>import('./features/mechanic/components/mechanic-storage/mechanic-storage.component').then(m=>m.MechanicStorageComponent);
+const MechanicConfigComponent=()=>import('./features/mechanic/components/mechanic-config/mechanic-config.component').then(m=>m.MechanicConfigComponent);
 export const routes: Routes = [
   { path: 'authentication',component:AuthenticationPageComponent,
     children: [
@@ -46,14 +47,13 @@ export const routes: Routes = [
       {path:'home',loadComponent:DriverHomeComponent},
       {path:'requests-received',loadComponent:DriverRequestsReceivedComponent},
       {path:'add-vehicle', loadComponent: AddVehicleComponent},
-
       {path:'vehicle',loadComponent:DriverVehicleComponent},
       {path:'send-request',loadComponent:SendAssignmentRequestComponent},
       {path:'requests-sent',loadComponent:DriverRequestsSentComponent},
       {path:'assignment-request',loadComponent:AssignmentRequestSentComponent},
       {path:'maintenance-request',loadComponent:MaintenanceRequestReceivedComponent},
       {path:'profile',loadComponent:DriverProfileComponent},
-
+      {path:'config',loadComponent:DriverConfigComponent},
     ]},
   {path:'mechanic-page',loadComponent:MechanicPageComponent,
     children:[
@@ -67,7 +67,7 @@ export const routes: Routes = [
       {path:'profile',loadComponent:MechanicProfileComponent},
       {path:'add-inventory', loadComponent: AddInventoryComponent},
       {path:'inventory',loadComponent:InventoryComponent},
-      {path:'storage',loadComponent:MechanicStorageComponent},
+      {path:'config',loadComponent:MechanicConfigComponent}
     ]},
   {path:'**',loadComponent:PageNotFoundComponent},
 ];
