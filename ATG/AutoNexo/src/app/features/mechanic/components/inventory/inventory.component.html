@@ -1,0 +1,13 @@
+<app-goback-button />
+<main class="inventory-detail-main">
+  <div class="inventory-detail-container" *ngIf="inventory">
+    <div class="image-section">
+      <img class="inventory" src="/img/inventory-icon.png" alt="Inventario">
+    </div>
+    <div class="titles-container">
+      <h2 class="body-title">Inventario #{{ inventory.id }}</h2>
+      <h2 class="body-title">{{ inventory.title }}</h2>
+    </div>
+  </div>
+  <app-items-list/>
+</main>
