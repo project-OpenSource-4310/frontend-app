@@ -1,0 +1,11 @@
+<div class="items-list">
+  <h2 class="body-title">Items</h2>
+  <div class="items-container">
+    <div class="item-container" *ngFor="let item of items">
+      <p class="body-text item-data">{{ item.name }}</p>
+      <p class="body-text item-data">{{ item.description }}</p>
+      <p class="body-text item-data">Cantidad: {{ item.quantity }}</p>
+      <img class="item-img" [src]="getImage(item.description)" [alt]="item.description">
+    </div>
+  </div>
+</div>

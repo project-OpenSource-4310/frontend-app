@@ -1,0 +1,54 @@
+<app-goback-button/>
+<main class="add-inventory">
+  <h1 class="title">Agregar Inventario</h1>
+  <div class="forms">
+    <div class="inventory-data">
+      <form class="form" [formGroup]="form" (ngSubmit)="addInventory()">
+        <h2 class="form-title">Inventory Info</h2>
+        <div class="inputs-container">
+          <label>
+            <input class="input" type="text" placeholder="" required formControlName="title">
+            <span>Titulo</span>
+          </label>
+        </div>
+        <app-classic-button [disabled]="form.invalid">Agregar</app-classic-button>
+      </form>
+    </div>
+    <div class="inventory-data">
+      <form class="form item-form" [formGroup]="form">
+        <h2 class="form-title">Items</h2>
+        <div class="item-inputs">
+          <div class="inputs-container item" *ngFor="let item of itemInputs; let i = index">
+            <p class="body-title">Item #{{ i + 1 }}</p>
+
+            <!-- Tipo -->
+            <label>
+              <select class="input" [value]="item.type" (change)="onTypeChange($event, i)">
+                <option value="" disabled selected>Selecciona el tipo</option>
+                <option *ngFor="let type of types" [value]="type">{{ type }}</option>
+              </select>
+              <span>Tipo</span>
+            </label>
+
+            <!-- Descripción -->
+            <label>
+              <select class="input" [value]="item.desc" [disabled]="!item.descs.length" (change)="onDescChange($event, i)">
+                <option value="" disabled selected>Selecciona la descripción</option>
+                <option *ngFor="let desc of item.descs" [value]="desc">{{ desc }}</option>
+              </select>
+              <span>Descripción</span>
+            </label>
+
+            <!-- Cantidad -->
+            <label>
+              <input class="input" type="number" [value]="item.quantity" min="0" (input)="onQuantityChange($event, i)">
+              <span>Cantidad</span>
+            </label>
+          </div>
+          <app-add-button (click)="addItemField()"/>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</main>

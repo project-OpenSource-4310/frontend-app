@@ -1,0 +1,16 @@
+<div class="inventory-cards-container">
+  <div *ngFor="let inventory of inventories" class="inventory-card">
+    <mat-card class="card">
+      <div class="card-header">
+        <h3 class="body-title">{{ inventory.title }}</h3>
+        <p class="body-text">id: {{ inventory.id }}</p>
+      </div>
+      <mat-card-content class="card-content">
+        <p class="body-text">Items id: {{ inventory.items }}</p>
+      </mat-card-content>
+      <mat-card-actions class="card-actions">
+        <app-classic-button (click)="viewInventory(inventory.id)">Ver Inventario</app-classic-button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
