@@ -1,0 +1,18 @@
+<app-goback-button/>
+<main class="send-request">
+  <h1 class="title">Send Request</h1>
+  <form class="form" [formGroup]="form" (ngSubmit)="sendRequest()">
+    <h2 class="form-title">Vehicle Info</h2>
+    <div class="inputs-container">
+      <label>
+        <input class="input" type="text" placeholder="" required formControlName="mechanicId">
+        <span>ID del mecánico</span>
+      </label>
+      <label>
+        <input class="input" type="text" placeholder="" formControlName="description">
+        <span>¿Qué sucedió?</span>
+      </label>
+    </div>
+    <app-classic-button [disabled]="form.invalid">Send</app-classic-button>
+  </form>
+</main>
